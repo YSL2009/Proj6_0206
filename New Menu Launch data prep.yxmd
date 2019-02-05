@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RoundRoastersTransactions.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="StoreID" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Invoice Number" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Invoice Date" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="SKU" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Category" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Product" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="QTY" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Size" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Gross Margin" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+            <Field name="Sales" size="254" source="File: C:\Users\cy4911\Desktop\Business Analytics\PROJECTS Submitted\P6 - AB Test a New Menu Launch\RoundRoastersTransactions.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="126" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="StoreID" selected="True" />
+            <SelectField field="Invoice Number" selected="True" rename="Invoice_Number" />
+            <SelectField field="Invoice Date" selected="True" rename="Invoice_date" type="Date" size="10" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="Product" selected="True" />
+            <SelectField field="QTY" selected="True" />
+            <SelectField field="Size" selected="True" />
+            <SelectField field="Gross Margin" selected="True" type="FixedDecimal" size="21.2" />
+            <SelectField field="Sales" selected="True" type="FixedDecimal" size="21.2" />
+            <SelectField field="Sq_Ft" selected="False" type="Int16" size="2" />
+            <SelectField field="AvgMonthSales" selected="False" type="FixedDecimal" size="21.2" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="258" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Invoice_date]&gt;='2015-02-06' AND
+[Invoice_date]&lt;='2016-07-22'</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>
+            </Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-02-05 17:56:37</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2019-02-05 17:56:37</StartDate>
+              <EndDate>2019-02-05 17:56:37</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Invoice_date]&gt;='2015-02-06' AND
+[Invoice_date]&lt;='2016-07-22'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="FLOOR(DateTimeDiff([Invoice_date],'2015-02-06','days')/7+1)" field="Week" size="8" type="Int64" />
+            <FormulaField expression="DateTimeAdd('2015-02-06',7*([Week]-1),'days')" field="Week_Start" size="10" type="Date" />
+            <FormulaField expression="DateTimeAdd([Week_Start],6,'days')" field="Week_End" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Week = FLOOR(DateTimeDiff([Invoice_date],'2015-02-06','days')/7+1)
+Week_Start = ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="558" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="StoreID" action="GroupBy" rename="StoreID" />
+            <SummarizeField field="Week" action="CountDistinct" rename="CountDistinct_Week" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[CountDistinct_Week] = 76</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>CountDistinct_Week</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-02-05 23:15:29</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>76</Operand>
+              <StartDate>2019-02-05 23:15:29</StartDate>
+              <EndDate>2019-02-05 23:15:29</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[CountDistinct_Week] = 76</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="750" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="StoreID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="StoreID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_StoreID" selected="False" rename="Right_StoreID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="822" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="StoreID" action="GroupBy" rename="StoreID" />
+            <SummarizeField field="Invoice_Number" action="GroupBy" rename="Invoice_Number" />
+            <SummarizeField field="Invoice_date" action="GroupBy" rename="Invoice_date" />
+            <SummarizeField field="Week" action="GroupBy" rename="Week" />
+            <SummarizeField field="Week_Start" action="GroupBy" rename="Week_Start" />
+            <SummarizeField field="Week_End" action="GroupBy" rename="Week_End" />
+            <SummarizeField field="Gross Margin" action="Sum" rename="Sum_Gross Margin" />
+            <SummarizeField field="Sales" action="Sum" rename="Sum_Sales" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>1 row per Invoice</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="918" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="StoreID" action="GroupBy" rename="StoreID" />
+            <SummarizeField field="Week" action="GroupBy" rename="Week" />
+            <SummarizeField field="Week_Start" action="GroupBy" rename="Week_Start" />
+            <SummarizeField field="Week_End" action="GroupBy" rename="Week_End" />
+            <SummarizeField field="Invoice_Number" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText># of Invoices per store per week</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="906" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\cy4911\AppData\Local\Temp\Engine_16004_6b5f1772572a4405a57e42c6238f8202_\Engine_1844_209702e386f24d1cb0be4049e9ff7e96_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Menu Launch data prep</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
